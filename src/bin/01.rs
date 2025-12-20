@@ -37,7 +37,7 @@ pub fn part_one(input: &str) -> Option<u64> {
     count = if rotation == 0 { count + 1 } else { count };
     debug_println!("Current Rotation: {}", rotation);
     if (rotation < 0) || (rotation > 99) {
-      panic!("Rotation out of bounds: {}", rotation);
+      panic!("Rotation out of bounds: {rotation}");
     }
   }
   Some(count)
@@ -65,7 +65,7 @@ pub fn part_two(input: &str) -> Option<u64> {
       'R' => 1,
       _ => panic!("Invalid direction"),
     };
-    for j in 0..distance {
+    for _ in 0..distance {
       rotation = (rotation + d + 100) % 100;
       if rotation == 0 {
         count += 1;
