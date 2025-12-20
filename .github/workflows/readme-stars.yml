@@ -1,10 +1,10 @@
 name: Update readme ⭐️ progress
 
-on:
+on: push
     # !Please set a different minute than 51 if you enable this!
-    schedule:
-        - cron: "42 */12 * * *" # Every 12 hours
-    workflow_dispatch:
+    # schedule:
+    #     - cron: "42 */12 * * *" # Every 12 hours
+    #workflow_dispatch:
 
 jobs:
     update-readme:
